@@ -3,6 +3,16 @@
 email:
   default: null
   providers:
+  hasura:
+      authToken:
+        secretKeyRef:
+          key: notify.hasura.token
+          name: hasura-secrets
+    mandrill:
+      apiKey:
+        secretKeyRef:
+          key: notify.mandrill.key
+          name: hasura-secrets
     smtpConf:
       smtpHostname: ""
       smtpPassword:
